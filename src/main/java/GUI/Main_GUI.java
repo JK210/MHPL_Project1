@@ -41,15 +41,13 @@ public class Main_GUI extends javax.swing.JFrame {
     private void control() {
 
         pnlCard = new JPanel(cards);
-//        pnlTrangchu = new JPanel();
-//        pnlTrangchu.setBackground(Color.MAGENTA);
         pnlQLDiem = new JPanel();
         pnlQLGiangvien = new JPanel();
         pnlQLHocvien = new JPanel();
         pnlQLKhoahoc = new JPanel();
         pnlDangky = new JPanel();
 
-        QLyHocVien hocvien = new QLyHocVien();
+        StudentManage hocvien = new StudentManage();
         hocvien.setVisible(true);
         pnlQLHocvien.add(hocvien);
 
@@ -65,11 +63,10 @@ public class Main_GUI extends javax.swing.JFrame {
         khoahoc.setVisible(true);
         pnlQLKhoahoc.add(khoahoc);
 
-//        DangKy dangky = new DangKy();
-//        dangky.setVisible(true);
-//        pnlDangky.add(dangky);
+        DangKy dangky = new DangKy();
+        dangky.setVisible(true);
+        pnlDangky.add(dangky);
 
-//        pnlCard.add(pnlTrangchu,"1");
         pnlCard.add(pnlQLHocvien, "1");
         pnlCard.add(pnlQLDiem, "2");
         pnlCard.add(pnlQLGiangvien, "3");

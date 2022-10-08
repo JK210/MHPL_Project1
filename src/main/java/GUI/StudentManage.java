@@ -6,6 +6,8 @@ package GUI;
 
 //import BUS.StudentBUS;
 //import DTO.Person_DTO;
+import BUS.StudentBUS;
+import DTO.PersonDTO;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Vector;
@@ -20,67 +22,62 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Admin
  */
-public class QLyHocVien extends javax.swing.JPanel {
-//
-//    private Person_DTO stuDTO;
-//    private StudentBUS stuBUS = new StudentBUS() ;
-//    private DefaultTableModel dtmStu = null;
+public class StudentManage extends javax.swing.JPanel {
+
+    private PersonDTO stuDTO;
+    private StudentBUS stuBUS = new StudentBUS() ;
+    private DefaultTableModel dtmStu = null;
     /**
      * Creates new form Hv
      */
-    public QLyHocVien() {
+    public StudentManage() {
         initComponents();
-//        customStu();
+        customStu();
         
         
     }
     
-//    public void loadStuList(){
-//        
-//        
-//        tblStudent.setModel(dtmStu);
-//        dtmStu.setRowCount(0);
-//        stuBUS.getStuList();
-//        ArrayList<Person_DTO> stuList = stuBUS.getStuList();
-//        
-//        if(stuList != null){
-//            for ( Person_DTO hv : stuList  ){
-//                if(hv.getHireDate() == null)
-//                {
-//                    Vector vec = new Vector();
-//                    vec.add(hv.getPersonID());
-//                    vec.add(hv.getLastName());
-//                    vec.add(hv.getStName());
-//                    vec.add(hv.getEnrolDate());
-//                    dtmStu.addRow(vec);
-//                }
-//                
-//            }
-           
-//            dtmStu.fireTableDataChanged();
-//        }    
-//    }
+    public void loadStuList(){
+        
+        
+        tblStudent.setModel(dtmStu);
+        dtmStu.setRowCount(0);
+        stuBUS.getStuList();
+        ArrayList<PersonDTO> stuList = stuBUS.getStuList();
+        
+        if(stuList != null){
+            for ( PersonDTO hv : stuList  ){
+                if(hv.getHireDate() == null)
+                {
+                    Vector vec = new Vector();
+                    vec.add(hv.getPersonID());
+                    vec.add(hv.getLastName());
+                    vec.add(hv.getStName());
+                    vec.add(hv.getEnrolDate());
+                    dtmStu.addRow(vec);
+                }
+                
+            }
+        }    
+    }
 //    
-//    public void customStu(){
-//        dtmStu = new DefaultTableModel();
-//        dtmStu.addColumn("Student ID");
-//        dtmStu.addColumn("Last Name");
-//        dtmStu.addColumn("Name");
-//        dtmStu.addColumn("Enrollment Date");
-//
-//        
-//        tblStudent.setModel(dtmStu);
-//        tblStudent.getColumnModel().getColumn(0).setPreferredWidth(80);
-//        tblStudent.getColumnModel().getColumn(0).setModelIndex((int) CENTER_ALIGNMENT);
-//        tblStudent.getColumnModel().getColumn(1).setPreferredWidth(120);
-//        tblStudent.getColumnModel().getColumn(2).setPreferredWidth(55);
-//        tblStudent.getColumnModel().getColumn(3).setPreferredWidth(110);
-//        
-//        loadStuList();
-//        
-//        
-//        
-//    }
+    public void customStu(){
+        dtmStu = new DefaultTableModel();
+        dtmStu.addColumn("Student ID");
+        dtmStu.addColumn("Last Name");
+        dtmStu.addColumn("Name");
+        dtmStu.addColumn("Enrollment Date");
+
+        
+        tblStudent.setModel(dtmStu);
+        tblStudent.getColumnModel().getColumn(0).setPreferredWidth(80);
+        tblStudent.getColumnModel().getColumn(0).setModelIndex((int) CENTER_ALIGNMENT);
+        tblStudent.getColumnModel().getColumn(1).setPreferredWidth(120);
+        tblStudent.getColumnModel().getColumn(2).setPreferredWidth(55);
+        tblStudent.getColumnModel().getColumn(3).setPreferredWidth(110);
+        
+        loadStuList();
+    }
 //    
 
     /**
