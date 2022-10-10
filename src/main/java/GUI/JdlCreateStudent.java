@@ -178,14 +178,16 @@ public class JdlCreateStudent extends javax.swing.JDialog {
 
     private void btnCreateNewStuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateNewStuActionPerformed
 
-//        boolean flag = stuBUS.addStudent(txtLastName.getText(), txtStName.getText(), sdf.format(jclEnrolDate.getDate()));
-//
-//        if (flag != false) {
-//            txtLastName.setText("");
-//            txtStName.setText("");
-//            jclEnrolDate.setDate(null);
-//            this.dispose();
-//        }
+        boolean flag = stuBUS.createStudent(txtLastName.getText(), txtStName.getText(), sdf.format(jclEnrolDate.getDate()));
+
+        if (flag != false) {
+            txtLastName.setText("");
+            txtStName.setText("");
+            jclEnrolDate.setDate(null);
+            this.dispose();
+            StudentManage a = new StudentManage();
+            a.customStu();
+        }
     }//GEN-LAST:event_btnCreateNewStuActionPerformed
 
     private void btnClearWordsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearWordsActionPerformed

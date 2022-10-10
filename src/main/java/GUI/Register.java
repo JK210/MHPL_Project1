@@ -8,12 +8,12 @@ package GUI;
  *
  * @author Admin
  */
-public class DangKy extends javax.swing.JPanel {
+public class Register extends javax.swing.JPanel {
 
     /**
      * Creates new form DK
      */
-    public DangKy() {
+    public Register() {
         initComponents();
     }
 

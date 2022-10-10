@@ -120,7 +120,7 @@ public class StudentManage extends javax.swing.JPanel {
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 70, 40));
 
         btnAdd.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        btnAdd.setText("Create");
+        btnAdd.setText("Add");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddActionPerformed(evt);
@@ -185,16 +185,16 @@ public class StudentManage extends javax.swing.JPanel {
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
         // TODO open NewStudent JDialog
-        this.getClass().getResource("outline_search_black_24dp.png");       
+//        this.getClass().getResource("outline_search_black_24dp.png");       
     }//GEN-LAST:event_btnSearchActionPerformed
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
          try {
-//            JdlCreateStudent a = new JdlCreateStudent(null, true);
-//            a.setModal(true);
-//            a.setVisible(true);
-        } catch (Exception e) {
+            JdlCreateStudent a = new JdlCreateStudent(null, true);
+            a.setModal(true);
+            a.setVisible(true);
+        } catch (ClassNotFoundException e) {
             System.out.println(Arrays.toString(e.getStackTrace()));
         }
     }//GEN-LAST:event_btnAddActionPerformed
@@ -205,15 +205,15 @@ public class StudentManage extends javax.swing.JPanel {
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
         // TODO add your handling code here:
-//        int row = tblStudent.getSelectedRow();
-//        if (row > -1) {
-////            boolean flag = stuBUS.deleteStudent(dtmStu.getValueAt(row, 0).toString());
-////            dtmStu.removeRow(row);
-//           
-//            
-//        } else {
-//            JOptionPane.showMessageDialog(this, "Vui lòng chọn dòng muốn xóa!");
-//        }
+        int row = tblStudent.getSelectedRow();
+        if (row > -1) {
+//            boolean flag = stuBUS.deleteStudent(dtmStu.getValueAt(row, 0).toString());
+//            dtmStu.removeRow(row);
+           
+            
+        } else {
+            JOptionPane.showMessageDialog(this, "Vui lòng chọn dòng muốn xóa!");
+        }
         
         
     }//GEN-LAST:event_btnDeleteActionPerformed

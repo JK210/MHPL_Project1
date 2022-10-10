@@ -8,12 +8,12 @@ package GUI;
  *
  * @author Admin
  */
-public class QLyGiangVien extends javax.swing.JPanel {
+public class LecturerManage extends javax.swing.JPanel {
 
     /**
      * Creates new form Gv
      */
-    public QLyGiangVien() {
+    public LecturerManage() {
         initComponents();
     }
 

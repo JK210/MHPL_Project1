@@ -51,19 +51,19 @@ public class Main_GUI extends javax.swing.JFrame {
         hocvien.setVisible(true);
         pnlQLHocvien.add(hocvien);
 
-        QLyGiangVien giangvien = new QLyGiangVien();
+        LecturerManage giangvien = new LecturerManage();
         giangvien.setVisible(true);
         pnlQLGiangvien.add(giangvien);
 
-        QLyDiem diem = new QLyDiem();
+        GradeManage diem = new GradeManage();
         diem.setVisible(true);
         pnlQLDiem.add(diem);
 
-        QLyKhoaHoc khoahoc = new QLyKhoaHoc();
+        CourseManage khoahoc = new CourseManage();
         khoahoc.setVisible(true);
         pnlQLKhoahoc.add(khoahoc);
 
-        DangKy dangky = new DangKy();
+        Register dangky = new Register();
         dangky.setVisible(true);
         pnlDangky.add(dangky);
 
